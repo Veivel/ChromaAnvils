@@ -41,8 +41,8 @@ Add a little color to your items with ChromaAnvils. This mod lets you style and 
 
 ![Divider-showcase](https://cdn.nat.gg/projects/chromaanvils/divider/showcase.png)
 
-![Demo 1](https://cdn.nat.gg//projects/chromaanvils/demo.png?v=2)
-![Demo 2](https://cdn.nat.gg//projects/chromaanvils/demo2.png?v=2)
+![Demo 1](https://cdn.nat.gg//projects/chromaanvils/demo.png?v=3)
+![Demo 2](https://cdn.nat.gg//projects/chromaanvils/demo2.png?v=3)
 
 </div>
 
