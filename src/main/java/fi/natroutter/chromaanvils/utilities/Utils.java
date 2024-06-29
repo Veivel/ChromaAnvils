@@ -1,6 +1,4 @@
-package fi.natroutter.colorfulanvils.utilities;
-
-import net.kyori.adventure.text.minimessage.tag.standard.StandardTags;
+package fi.natroutter.chromaanvils.utilities;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

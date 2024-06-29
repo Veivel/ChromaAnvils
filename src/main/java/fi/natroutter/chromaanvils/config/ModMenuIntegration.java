@@ -1,4 +1,4 @@
-package fi.natroutter.colorfulanvils.config;
+package fi.natroutter.chromaanvils.config;
 
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;

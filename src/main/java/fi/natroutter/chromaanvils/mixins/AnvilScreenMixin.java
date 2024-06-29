@@ -1,7 +1,8 @@
-package fi.natroutter.colorfulanvils.mixins;
+package fi.natroutter.chromaanvils.mixins;
 
 import com.llamalad7.mixinextras.sugar.Local;
-import fi.natroutter.colorfulanvils.utilities.Colors;
+import fi.natroutter.chromaanvils.ChromaAnvils;
+import fi.natroutter.chromaanvils.utilities.Colors;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.kyori.adventure.text.Component;
@@ -19,7 +20,6 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-@Environment(EnvType.CLIENT)
 @Mixin(AnvilScreen.class)
 public abstract class AnvilScreenMixin extends ForgingScreen<AnvilScreenHandler> {
 
@@ -32,10 +32,8 @@ public abstract class AnvilScreenMixin extends ForgingScreen<AnvilScreenHandler>
 
     @Inject(method = "setup", at = @At(value = "TAIL"))
     public void setup(CallbackInfo ci) {
-        nameField.setMaxLength(255);
+        nameField.setMaxLength(ChromaAnvils.config().AnvilTextLimit);
     }
-
-    //this.nameField.setText(stack.isEmpty() ? "" : stack.getName().getString());
 
     @Inject(method = "onSlotUpdate", at = @At(
             value = "INVOKE",

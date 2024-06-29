@@ -2,25 +2,48 @@
   "schemaVersion": 1,
   "id": "chromaanvils",
   "version": "${version}",
-
   "name": "ChromaAnvils",
   "description": "Allow player(s) to use minimessage color and styling tags in anvils",
-  "authors": [],
-  "contact": {},
-
+  "authors": [
+    "NATroutter"
+  ],
+  "contact": {
+    "homepage": "https://NATroutter.fi",
+    "sources": "https://github.com/NATroutter/ChromaAnvils",
+    "issues": "https://github.com/NATroutter/ChromaAnvils/issues"
+  },
   "license": "MIT",
   "icon": "assets/chromaanvils/icon.png",
-
   "environment": "*",
-  "entrypoints": {},
-
-      "mixins": [
-        "chromaanvils.mixins.json"
-      ],
-
+  "entrypoints": {
+    "main": [
+      "fi.natroutter.chromaanvils.ChromaAnvils"
+    ],
+    "modmenu": [
+      "fi.natroutter.chromaanvils.config.ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "chromaanvils.mixins.json"
+  ],
   "depends": {
+    "minecraft": ">=${minecraft_version}",
     "fabricloader": ">=${loader_version}",
-        "fabric": "*",
-    "minecraft": "${minecraft_version}"
+    "fabric": "*",
+    "fabric-api": ">=0.100.4",
+    "cloth-config": ">=15.0.127"
+  },
+  "suggests": {
+    "modmenu": ">=11.0.1"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "Discord": "https://discord.nat.gg/",
+        "Format Usage": "https://docs.advntr.dev/minimessage/format.html",
+        "Format Generator": "https://webui.advntr.dev/"
+      },
+      "update_checker": true
+    }
   }
 }

@@ -1,11 +1,11 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "fi.natroutter.chromaanvils.mixin",
+  "package": "fi.natroutter.chromaanvils.mixins",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-  ],
-  "client": [
+    "AnvilScreenMixin",
+    "AnvilScreenHandlerMixin"
   ],
   "injectors": {
     "defaultRequire": 1

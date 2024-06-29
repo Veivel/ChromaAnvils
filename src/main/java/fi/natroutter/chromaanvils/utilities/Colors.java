@@ -1,16 +1,24 @@
-package fi.natroutter.colorfulanvils.utilities;
+package fi.natroutter.chromaanvils.utilities;
 
+import net.kyori.adventure.platform.fabric.FabricAudiences;
+import net.kyori.adventure.platform.fabric.FabricClientAudiences;
 import net.kyori.adventure.platform.fabric.FabricServerAudiences;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import net.kyori.adventure.text.minimessage.tag.resolver.TagResolver;
 import net.kyori.adventure.text.minimessage.tag.standard.StandardTags;
 import net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.text.Text;
+import net.minecraft.world.World;
+
+import java.util.Objects;
 
 public class Colors {
 
-    public static volatile FabricServerAudiences adventure;
+    public static volatile FabricAudiences audiences;
 
     public static MiniMessage miniMessage() {
         return MiniMessage.builder()
@@ -26,12 +34,10 @@ public class Colors {
                 ).build();
     }
 
-    public static FabricServerAudiences adventure() {
-        FabricServerAudiences ret = adventure;
-        if(ret == null) {
-            throw new IllegalStateException("Tried to access Adventure without a running server!");
-        }
-        return ret;
+    public static FabricAudiences getAudience() {
+        //throw new IllegalStateException("Tried to access Adventure without a running server!");
+        if (audiences == null) return null;
+        return audiences;
     }
 
     public static String plain(Component component) {
@@ -47,7 +53,8 @@ public class Colors {
     }
 
     public static Text toNative(Component component) {
-        return adventure().toNative(component);
+        if (getAudience() == null) return null;
+        return getAudience().toNative(component);
     }
 
 }

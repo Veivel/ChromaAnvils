@@ -1,11 +1,11 @@
-package fi.natroutter.colorfulanvils.mixins;
+package fi.natroutter.chromaanvils.mixins;
 
 import com.llamalad7.mixinextras.sugar.Local;
-import fi.natroutter.colorfulanvils.utilities.Colors;
-import fi.natroutter.colorfulanvils.utilities.Utils;
+import fi.natroutter.chromaanvils.ChromaAnvils;
+import fi.natroutter.chromaanvils.utilities.Colors;
+import fi.natroutter.chromaanvils.utilities.Utils;
+import me.lucko.fabric.api.permissions.v0.Permissions;
 import net.kyori.adventure.text.Component;
-import net.kyori.adventure.text.TextComponent;
-import net.kyori.adventure.text.flattener.ComponentFlattener;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.ItemStack;
@@ -59,22 +59,16 @@ public abstract class AnvilScreenHandlerMixin extends ForgingScreenHandler {
 
     @Unique
     private void ModifyResult(ItemStack stack) {
-        if (this.newItemName != null) {
+        boolean hasPerms = Permissions.check(this.player, ChromaAnvils.MOD_ID+".use",true);
+
+        if (this.newItemName != null && hasPerms && !ChromaAnvils.config().isBlacklisted(stack)) {
             Component comp = Colors.deserialize(this.newItemName);
-
             String sComp = Colors.serialize(comp);
-            String plain = Colors.plain(comp);
-            String name = Utils.extractWithTags(sComp, 50);
+            String name = Utils.extractWithTags(sComp, ChromaAnvils.config().NameLimit);
 
-            debug("SComp: " + sComp + " ("+sComp.length()+")");
-            debug("plain: " + plain+ " ("+plain.length()+")");
-            debug("name: " + name+ " ("+name.length()+")");
-            debug(" ");
-
-            comp = Colors.deserialize(name);
-            stack.set(DataComponentTypes.CUSTOM_NAME, Colors.toNative(comp));
+            Component finalComp = Colors.deserialize(name);
+            Text finalText = Colors.toNative(finalComp);
+            stack.set(DataComponentTypes.CUSTOM_NAME, finalText);
         }
     }
-    private void debug(Object v) {System.out.println(v);}
-
 }

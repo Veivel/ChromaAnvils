@@ -1,25 +1,30 @@
-package fi.natroutter.colorfulanvils.config;
+package fi.natroutter.chromaanvils.config;
 
-import fi.natroutter.colorfulanvils.ColorfulAnvils;
+import fi.natroutter.chromaanvils.ChromaAnvils;
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
+import net.minecraft.item.ItemStack;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
-@Config(name = ColorfulAnvils.MOD_ID)
+@Config(name = ChromaAnvils.MOD_ID)
 public class ModConfig implements ConfigData {
 
+    @ConfigEntry.Gui.Tooltip
+    public int AnvilTextLimit = 255;
 
     @ConfigEntry.Gui.Tooltip
-    boolean BypassCharacterLimit = true;
+    public int NameLimit = 50;
 
     @ConfigEntry.Gui.Tooltip
-    int CharacterLimit = 50;
+    public List<String> BlackListedItems = new ArrayList<>(List.of("minecraft:name_tag <-example"));
 
-    @ConfigEntry.Gui.Tooltip
-    List<String> BlackListedItems = new ArrayList<>();
 
+    public boolean isBlacklisted(ItemStack stack) {
+        return BlackListedItems.stream().anyMatch(blacklistedId -> blacklistedId.equalsIgnoreCase(stack.getRegistryEntry().getIdAsString()));
+    }
 
 }
