@@ -8,8 +8,15 @@
 
 ![GitHub licence](https://img.shields.io/github/license/NATroutter/ChromaAnvils?style=for-the-badge&logo=github&foceupdate=1)
 ![Discord](https://img.shields.io/discord/256776363892015115?style=for-the-badge&label=Discord&logo=discord&foceupdate=1)  
-![GitHub release (with filter)](https://img.shields.io/github/v/release/NATroutter/ChromaAnvils?style=for-the-badge&logo=github&foceupdate=1)
-![GitHub all releases](https://img.shields.io/github/downloads/NATroutter/ChromaAnvils/total?style=for-the-badge&logo=github&foceupdate=1)  
+
+![GitHub release (with filter)](https://img.shields.io/github/v/release/NATroutter/ChromaAnvils?style=for-the-badge&label=Latest%20Release&logo=github&foceupdate=4)
+![Modrinth Version](https://img.shields.io/modrinth/v/chromaanvils?style=for-the-badge)
+![Modrinth Game Versions](https://img.shields.io/modrinth/game-versions/chromaanvils?style=for-the-badge)
+
+
+![Modrinth Downloads](https://img.shields.io/modrinth/dt/chromaanvils?style=for-the-badge&label=Modrinth%20Downloads)
+![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/NATroutter/ChromaAnvils/total?style=for-the-badge&label=Github%20Downloads)
+
 ![GitHub issues](https://img.shields.io/github/issues/NATroutter/ChromaAnvils?style=for-the-badge&logo=github&foceupdate=1)
 ![GitHub last commit](https://img.shields.io/github/last-commit/NATroutter/ChromaAnvils?style=for-the-badge&logo=github&foceupdate=1)
 
@@ -23,7 +30,7 @@
 
 </div>
 
-Add a little color to your items with ChromaAnvils. This mod lets you style and color your items however you want, enabling you to have cool and unique items.
+With this simple fabric mod you can add a little color to your items with ChromaAnvils. This mod lets you style and color your items however you want, enabling you to have cool and unique items.
 
 <div align="center" style="text-align: center;display:block; margin:auto;">
 
