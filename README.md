@@ -17,7 +17,7 @@
 
 </div>
 
-<div style="text-align: center;">
+<div style="text-align: center;display:block; margin:auto;">
 
 ![Divider-about](https://cdn.nat.gg/projects/chromaanvils/divider/about.png)
 
@@ -25,7 +25,7 @@
 
 Add a little color to your items with ChromaAnvils. This mod lets you style and color your items however you want, enabling you to have cool and unique items.
 
-<div style="text-align: center;">
+<div style="text-align: center;display:block; margin:auto;">
 
 ![Divider-features](https://cdn.nat.gg/projects/chromaanvils/divider/features.png)
 
@@ -37,7 +37,7 @@ Add a little color to your items with ChromaAnvils. This mod lets you style and 
 🟢 **Ability to blacklist items.**  
 🟢 **Extensive configs.**
 
-<div style="text-align: center;">
+<div style="text-align: center;display:block; margin:auto;">
 
 ![Divider-showcase](https://cdn.nat.gg/projects/chromaanvils/divider/showcase.png)
 
@@ -46,7 +46,7 @@ Add a little color to your items with ChromaAnvils. This mod lets you style and 
 
 </div>
 
-<div style="text-align: center;">
+<div style="text-align: center;display:block; margin:auto;">
 
 ![Divider-usage](https://cdn.nat.gg/projects/chromaanvils/divider/usage.png?v=1)
 
@@ -78,7 +78,7 @@ Add a little color to your items with ChromaAnvils. This mod lets you style and 
 For more information about you can refer minimessages own [documentation](https://docs.advntr.dev/minimessage/format.html) but keep in mind that all the tags provided by minimessage doesn't work in item names
 
 
-<div style="text-align: center;">
+<div style="text-align: center;display:block; margin:auto;">
 
 ![Divider-requirements](https://cdn.nat.gg/projects/chromaanvils/divider/requirements.png)
 
@@ -87,14 +87,14 @@ For more information about you can refer minimessages own [documentation](https:
 - [Fabric API](https://modrinth.com/mod/fabric-api) | 0.100.4 (or newer)
 - [Cloth Config](https://modrinth.com/mod/cloth-config) | 15.0.127 (or newer)
 
-<div style="text-align: center;">
+<div style="text-align: center;display:block; margin:auto;">
 
 ![Divider-download](https://cdn.nat.gg/projects/chromaanvils/divider/download.png)
 [![Available on modrinth](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/modrinth_vector.svg)](https://modrinth.com/project/chromaanvils/versions)
 [![Available on github](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/github_vector.svg)](https://github.com/NATroutter/ChromaAnvils/releases)
 
 </div>
-<div style="text-align: center;">
+<div style="text-align: center;display:block; margin:auto;">
 
 ![Divider-support](https://cdn.nat.gg/projects/chromaanvils/divider/support.png?v=1)
 
@@ -102,7 +102,7 @@ For more information about you can refer minimessages own [documentation](https:
 
 Developing takes a lot of time and energy. If you like my work, I would greatly appreciate any support you can offer. Even a small contribution helps keep me motivated and ensures future updates continue to come. However, it's completely optional.
 
-<div style="text-align: center;">
+<div style="text-align: center;display:block; margin:auto;">
 
 [![kofi-singular](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/donate/kofi-singular_vector.svg)](https://ko-fi.com/natroutter)
 
