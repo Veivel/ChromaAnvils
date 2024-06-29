@@ -1,4 +1,4 @@
-![banner](https://cdn.nat.gg/projects/chromaanvils/banner.png)
+![banner](https://cdn.nat.gg/projects/chromaanvils/banner.png?v=1)
 
 <hr/>
 
@@ -6,12 +6,12 @@
 
 
 
-![GitHub licence](https://img.shields.io/github/license/NATroutter/ChromaAnvils?style=for-the-badge&logo=github)
-![Discord](https://img.shields.io/discord/256776363892015115?style=for-the-badge&label=Discord&logo=discord)  
-![GitHub release (with filter)](https://img.shields.io/github/v/release/NATroutter/ChromaAnvils?style=for-the-badge&logo=github)
-![GitHub all releases](https://img.shields.io/github/downloads/NATroutter/ChromaAnvils/total?style=for-the-badge&logo=github)  
-![GitHub issues](https://img.shields.io/github/issues/NATroutter/ChromaAnvils?style=for-the-badge&logo=github)
-![GitHub last commit](https://img.shields.io/github/last-commit/NATroutter/ChromaAnvils?style=for-the-badge&logo=github)
+![GitHub licence](https://img.shields.io/github/license/NATroutter/ChromaAnvils?style=for-the-badge&logo=github&foceupdate=1)
+![Discord](https://img.shields.io/discord/256776363892015115?style=for-the-badge&label=Discord&logo=discord&foceupdate=1)  
+![GitHub release (with filter)](https://img.shields.io/github/v/release/NATroutter/ChromaAnvils?style=for-the-badge&logo=github&foceupdate=1)
+![GitHub all releases](https://img.shields.io/github/downloads/NATroutter/ChromaAnvils/total?style=for-the-badge&logo=github&foceupdate=1)  
+![GitHub issues](https://img.shields.io/github/issues/NATroutter/ChromaAnvils?style=for-the-badge&logo=github&foceupdate=1)
+![GitHub last commit](https://img.shields.io/github/last-commit/NATroutter/ChromaAnvils?style=for-the-badge&logo=github&foceupdate=1)
 
 <hr/>
 
