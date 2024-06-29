@@ -63,6 +63,9 @@ With this simple fabric mod you can add a little color to your items with Chroma
 
 **Named colors**: black, dark_blue, dark_green, dark_aqua, dark_red, dark_purple, gold, gray, dark_gray, blue, green, aqua, red, light_purple, yellow, or white.
 
+You can also use the [MiniMessage Viewer](https://webui.advntr.dev/) to "generate" the styling so that you dont have to fiddle with the tags
+
+
 | Tag                                            | Example                                                                     | Description                                                                                                                                   |
 |------------------------------------------------|-----------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
 | ```<named color>``` ```<hex color>```          | ```<dark_red>``` ```<#ff0000```                                             | Changes the color for next part of the text                                                                                                   |
