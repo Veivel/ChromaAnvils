@@ -104,17 +104,4 @@ For more information about you can refer minimessages own [documentation](https:
 [![Available on github](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/github_vector.svg)](https://github.com/NATroutter/ChromaAnvils/releases)
 
 </div>
-<div align="center" style="text-align: center;display:block; margin:auto;">
-
-![Divider-support](https://cdn.nat.gg/projects/chromaanvils/divider/support.png?v=1)
-
-</div>
-
-Developing takes a lot of time and energy. If you like my work, I would greatly appreciate any support you can offer. Even a small contribution helps keep me motivated and ensures future updates continue to come. However, it's completely optional.
-
-<div align="center" style="text-align: center;display:block; margin:auto;">
-
-[![kofi-singular](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/donate/kofi-singular_vector.svg)](https://ko-fi.com/natroutter)
-
-</div>
 
