@@ -17,7 +17,6 @@
 ![Modrinth Downloads](https://img.shields.io/modrinth/dt/chromaanvils?style=for-the-badge&label=Modrinth%20Downloads)
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/NATroutter/ChromaAnvils/total?style=for-the-badge&label=Github%20Downloads)
 
-![GitHub issues](https://img.shields.io/github/issues/NATroutter/ChromaAnvils?style=for-the-badge&logo=github&foceupdate=1)
 ![GitHub last commit](https://img.shields.io/github/last-commit/NATroutter/ChromaAnvils?style=for-the-badge&logo=github&foceupdate=1)
 
 <hr/>
@@ -58,6 +57,9 @@ With this simple fabric mod you can add a little color to your items with Chroma
 ![Divider-usage](https://cdn.nat.gg/projects/chromaanvils/divider/usage.png?v=1)
 
 </div>
+
+## 🔒 Permissions
+If you have a permission plugin/mod like [LuckPerms](https://luckperms.net/), you are required to have the permission ``chromaanvils.use`` to be able to use it. If you don't have any permission plugins/mods, all players are able to use it.
 
 ## ✏️ Formating
 
@@ -103,7 +105,20 @@ For more information about you can refer minimessages own [documentation](https:
 [![Available on modrinth](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/modrinth_vector.svg)](https://modrinth.com/project/chromaanvils/versions)
 [![Available on github](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/github_vector.svg)](https://github.com/NATroutter/ChromaAnvils/releases)
 
+![Divider-cummunity-support](https://cdn.nat.gg/projects/chromaanvils/divider/community_support.png?v=1)
+
 </div>
+
+Our Discord server serves as a central hub for all users of our mods and plugins. It's a place where you can seek help if you encounter issues, report bugs, or suggest new features in the dedicated channels. We also use it to share updates and announcements about our projects. Even if you don't need immediate support, you're welcome to join and interact with other community members who share an interest in our Minecraft creations.
+
+<div align="center" style="text-align: center;display:block; margin:auto;">
+
+[![discord-plural](https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/social/discord-plural_64h.png)](https://discord.com/invite/EtCMGTxkyE)
+
+
+</div>
+
+
 <div align="center" style="text-align: center;display:block; margin:auto;">
 
 ![Divider-support](https://cdn.nat.gg/projects/chromaanvils/divider/support.png?v=1)
