@@ -1,24 +1,18 @@
 package fi.natroutter.chromaanvils.utilities;
 
-import net.kyori.adventure.platform.fabric.FabricAudiences;
-import net.kyori.adventure.platform.fabric.FabricClientAudiences;
-import net.kyori.adventure.platform.fabric.FabricServerAudiences;
+import net.kyori.adventure.audience.Audience;
+import net.kyori.adventure.platform.modcommon.MinecraftClientAudiences;
+import net.kyori.adventure.platform.modcommon.MinecraftServerAudiences;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import net.kyori.adventure.text.minimessage.tag.resolver.TagResolver;
 import net.kyori.adventure.text.minimessage.tag.standard.StandardTags;
 import net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer;
-import net.minecraft.client.MinecraftClient;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.text.Text;
-import net.minecraft.world.World;
-
-import java.util.Objects;
 
 public class Colors {
 
-    public static volatile FabricAudiences audiences;
+    public static volatile MinecraftServerAudiences serverAudiences;
 
     public static MiniMessage miniMessage() {
         return MiniMessage.builder()
@@ -34,10 +28,12 @@ public class Colors {
                 ).build();
     }
 
-    public static FabricAudiences getAudience() {
-        //throw new IllegalStateException("Tried to access Adventure without a running server!");
-        if (audiences == null) return null;
-        return audiences;
+    public static MinecraftServerAudiences getServerAudience() {
+        if (serverAudiences == null) return null;
+        return serverAudiences;
+    }
+    public static MinecraftClientAudiences getClientAudience() {
+        return MinecraftClientAudiences.of();
     }
 
     public static String plain(Component component) {
@@ -53,8 +49,17 @@ public class Colors {
     }
 
     public static Text toNative(Component component) {
-        if (getAudience() == null) return null;
-        return getAudience().toNative(component);
+        if (getServerAudience() != null) {
+            return getServerAudience().asNative(component);
+        }
+        return getClientAudience().asNative(component);
+    }
+
+    public static Component toAdventure(Text text) {
+        if (getServerAudience() != null) {
+            return getServerAudience().asAdventure(text);
+        }
+        return getClientAudience().asAdventure(text);
     }
 
 }

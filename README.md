@@ -40,7 +40,7 @@ With this simple fabric mod you can add a little color to your items with Chroma
 
 🟢 **No mandatory client installation.**  
 🟢 **MiniMessage formating.**  
-🟢 **Permission support for server installation,.**  
+🟢 **Permission support for server installation.**  
 🟢 **Ability to blacklist items.**  
 🟢 **Extensive configs.**
 
