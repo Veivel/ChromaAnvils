@@ -6,6 +6,7 @@ import net.kyori.adventure.platform.modcommon.MinecraftServerAudiences;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import net.kyori.adventure.text.minimessage.tag.resolver.TagResolver;
+import net.kyori.adventure.text.minimessage.tag.resolver.TagResolver.Builder;
 import net.kyori.adventure.text.minimessage.tag.standard.StandardTags;
 import net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer;
 import net.minecraft.text.Text;
@@ -27,6 +28,15 @@ public class Colors {
                         .build()
                 ).build();
     }
+    public static MiniMessage miniMessage(TagResolver[] tags) {
+        Builder tagBuilder = TagResolver.builder();
+        for (TagResolver tag : tags) {
+            tagBuilder.resolver(tag);
+        }
+        TagResolver tagResolver = tagBuilder.build();
+
+        return MiniMessage.builder().tags(tagResolver).build();
+    }
 
     public static MinecraftServerAudiences getServerAudience() {
         if (serverAudiences == null) return null;
@@ -45,7 +55,13 @@ public class Colors {
     }
 
     public static Component deserialize(String value) {
+        // for normal handler
         return miniMessage().deserialize(value);
+    }
+
+    public static Component deserialize(String value, TagResolver[] tags) {
+        // for server handler
+        return miniMessage(tags).deserialize(value);
     }
 
     public static Text toNative(Component component) {

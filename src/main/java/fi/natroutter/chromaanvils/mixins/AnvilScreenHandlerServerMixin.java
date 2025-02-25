@@ -15,7 +15,12 @@ import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.screen.slot.ForgingSlotsManager;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.kyori.adventure.text.minimessage.tag.resolver.TagResolver;
+import net.kyori.adventure.text.minimessage.tag.standard.StandardTags;
 import net.minecraft.text.Text;
+
+import java.util.ArrayList;
+
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -61,6 +66,29 @@ public abstract class AnvilScreenHandlerServerMixin extends ForgingScreenHandler
     }
 
     @Unique
+    private TagResolver[] GetTagsFromPlayerPermissions(ServerPlayerEntity player) {
+        boolean hasColorPerms = Permissions.check(player, ChromaAnvils.MOD_ID + ".colors", false);
+        boolean hasDecorPerms = Permissions.check(player, ChromaAnvils.MOD_ID + ".decorations", false);
+        boolean hasFontPerms = Permissions.check(player, ChromaAnvils.MOD_ID + ".font", false);
+        boolean hasGradientPerms = Permissions.check(player, ChromaAnvils.MOD_ID + ".gradient", false);
+        boolean hasRainbowPerms = Permissions.check(player, ChromaAnvils.MOD_ID + ".rainbow", false);
+        boolean hasTransitionPerms = Permissions.check(player, ChromaAnvils.MOD_ID + ".transition", false);
+        boolean hasResetPerms = Permissions.check(player, ChromaAnvils.MOD_ID + ".reset", true);
+        
+        ArrayList<TagResolver> tags = new ArrayList<TagResolver>();
+        if (hasColorPerms) tags.add(StandardTags.color());
+        if (hasDecorPerms) tags.add(StandardTags.decorations());
+        if (hasFontPerms) tags.add(StandardTags.font());
+        if (hasGradientPerms) tags.add(StandardTags.gradient());
+        if (hasRainbowPerms) tags.add(StandardTags.rainbow());
+        if (hasTransitionPerms) tags.add(StandardTags.transition());
+        if (hasResetPerms) tags.add(StandardTags.reset());
+        int len = tags.size();
+
+        return tags.toArray(new TagResolver[len]);
+    }
+
+    @Unique
     private void ModifyResult(ItemStack stack) {
         if (this.newItemName == null) return;
 
@@ -73,12 +101,14 @@ public abstract class AnvilScreenHandlerServerMixin extends ForgingScreenHandler
                 if (this.newItemName != null && !ChromaAnvils.config().isBlacklisted(stack)) {
                     String clamped = this.newItemName.substring(0,Math.min(this.newItemName.length(), ChromaAnvils.config().NameLimit));
 
-                    Component comp = Colors.deserialize(clamped);
+                    TagResolver[] tags = GetTagsFromPlayerPermissions(serverPlayer);
+
+                    Component comp = Colors.deserialize(clamped, tags);
                     String serialize = Colors.serialize(comp);
 
                     String name = Utils.extractWithTags(serialize, ChromaAnvils.config().NameLimit);
 
-                    Component finalComp = Colors.deserialize(name);
+                    Component finalComp = Colors.deserialize(name, tags);
 
                     stack.set(DataComponentTypes.CUSTOM_NAME, Colors.toNative(finalComp));
 
