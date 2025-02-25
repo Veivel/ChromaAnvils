@@ -62,6 +62,18 @@ With this simple fabric mod you can add a little color to your items with Chroma
 ## 🔒 Permissions
 If you have a permission plugin/mod like [LuckPerms](https://luckperms.net/), you are required to have the permission ``chromaanvils.use`` to be able to use it. If you don't have any permission plugins/mods, all players are able to use it.
 
+Additionally, you will also need to have the following permissions, corresponding to the formatting you want to allow:
+
+```properties
+chromaanvils.colors
+chromaanvils.decorations
+chromaanvils.font
+chromaanvils.gradient
+chromaanvils.rainbow
+chromaanvils.transition
+chromaanvils.reset
+```
+
 ## ✏️ Formating
 
 **Named colors**: black, dark_blue, dark_green, dark_aqua, dark_red, dark_purple, gold, gray, dark_gray, blue, green, aqua, red, light_purple, yellow, or white.
