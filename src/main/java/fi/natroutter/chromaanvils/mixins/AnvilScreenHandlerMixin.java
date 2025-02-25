@@ -13,7 +13,6 @@ import net.minecraft.screen.AnvilScreenHandler;
 import net.minecraft.screen.ForgingScreenHandler;
 import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.screen.ScreenHandlerType;
-import net.minecraft.screen.slot.ForgingSlotsManager;
 import net.minecraft.text.Text;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
@@ -29,8 +28,8 @@ public abstract class AnvilScreenHandlerMixin extends ForgingScreenHandler {
 
     @Shadow private @Nullable String newItemName;
 
-    public AnvilScreenHandlerMixin(@Nullable ScreenHandlerType<?> type, int syncId, PlayerInventory playerInventory, ScreenHandlerContext context, ForgingSlotsManager forgingSlotsManager) {
-        super(type, syncId, playerInventory, context, forgingSlotsManager);
+    public AnvilScreenHandlerMixin(@Nullable ScreenHandlerType<?> type, int syncId, PlayerInventory playerInventory, ScreenHandlerContext context) {
+        super(type, syncId, playerInventory, context);
     }
 
     @Inject(method = "updateResult", at = @At(
